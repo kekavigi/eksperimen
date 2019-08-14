@@ -1,6 +1,8 @@
 # SMS Gateway Pribadi
 Beberapa tempat di Indonesia saat ini tidak memiliki akses internet, masih banyak yang mengandalkan SMS dan telepon untuk berkomunikasi. Proyek ini adalah upaya saya untuk tetap dapat mengirimkan dan menerima email, mengakses sosial media -- seperti LINE dan Whatsapps -- Wikipedia, KBBI, WolframAlpha, dan sebagainya, menggunakan SMS lewat handphone klasik seperti Nokia.
 
+*15 May 2018*
+
 ## Memulai
 ### Prasyarat
 * Sepertinya tidak ada alamat [SMS Gateway](https://en.wikipedia.org/wiki/SMS_gateway) di Indonesia. Karenanya, diperlukan sebuah server dan nomor telepon yang dapat mentransmisikan dan mengolah SMS. Ada beberapa cara untuk mendapatnya secara gratis -- setidaknya dalam masa trial -- dari beberapa web seperti [Twilio](http://twilio.com/) dan [ClickSend](http://clicksend.com/). Namun cara termudah bagi saya adalah dengan menggunakan [Telerivet](http://telerivet.com/) dan menginstall [Telerivet Gateway App](https://telerivet.com/product/app) pada smartphone Android.
