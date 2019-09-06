@@ -1,4 +1,4 @@
-# code frequency
+# download digilib
 [lihat di sini](https://nbviewer.jupyter.org/github/kekavigi/kegabutan/blob/master/download%20digilib/main.ipynb)
 
 ## abstrak

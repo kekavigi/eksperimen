@@ -1,5 +1,4 @@
 # Plotting Excel
-# code frequency
 [lihat di sini](https://nbviewer.jupyter.org/github/kekavigi/kegabutan/blob/master/plotting%20excel/main.ipynb)
 
 ## abstrak
