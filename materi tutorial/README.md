@@ -13,6 +13,6 @@ Tidak/Belum dilanjutkan:
 * MATLAB (dalam bahasa Octave)
 
 
-bagi yang ingin membaca modul dengan lebih mudah, [klik sini](https://nbviewer.jupyter.org/github/kekavigi/kegabutan/tree/master/materi%20tutorial/).
+bagi yang ingin membaca modul (dengan form feedback) lebih mudah, [klik sini](https://nbviewer.jupyter.org/github/kekavigi/kegabutan/tree/materi_tutor/materi%20tutorial/).
 
 Feedback dari anda diperlukan! bantu kami dalam [meningkatkan modul ini](https://forms.gle/pWJd6y4hY4KWMcno6). Daftar feedback dapat dilihat [di sini](https://docs.google.com/spreadsheets/d/1pOHHvKxy4fxLTKoLLWgwCpq3yc3E0rDi_8cIXQ97g-o/edit?usp=sharing)
