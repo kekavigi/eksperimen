@@ -2,11 +2,13 @@
 untuk proses lebih mendetail mengenai proses, [lihat di sini](https://nbviewer.jupyter.org/github/kekavigi/kegabutan/blob/master/download%20digilib/main.ipynb)
 
 ## abstrak
-salah satu nama proker di divisi himpunan saya: "Lex Luthor's Database" (tebak siapa yang ngusulkan nama itu). Secara sederhana, *#tidakmendetail*, proker ini bertugas untuk mencatat segala hal* ke sebuah database. Salah satunya, topik TA anak matematika. Tapi, jika anda membaca ini ketika notebook ini ditulis, website [Digital Library ITB](www.digilib.itb.ac.id) did not spark fun. Hal ini disebabkan karena bagian "Pencarian Lanjut" (advanced search)-nya error terus. Tapi, fear not! masih ada cara untuk mendapatkan informasi TA anak matematika dari website sialan ini.
+Salah satu program kerja di divisi Penelitian HIMATIKA ITB adalah \"Lex Luthor's Database\". Secara sederhana, proker ini bertugas untuk mencatat segala hal (baik kondisi internal maupun eksternal himpuunan) ke sebuah database. Dengan adanya database ini, diharapkan anggota himpunan (termasuk badan pengurus himpunan) dapat menerapkan kebijakan yang berbasis data. Ditugaskan untuk melakukan pendataan ini, saya memutuskan untuk melakukan scrapping website [Digital Library ITB](www.digilib.itb.ac.id).
 
 ## hasil
 Dari hasil crawling, saya mendapatkan tabel seperti berikut:
 ![Kondisi CSV](na_matrix.png)
+
+Proses saya melakukan scrapping data TA mahasiswa matematika dapat dibaca di [sini](main.ipynb)
 
 ## to-do
 1. analisis.
