@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>OlahGempa | eksperimen</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="OlahGempa" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/data%20gempa/" />
+<meta property="og:url" content="http://localhost:4000/data%20gempa/" />
+<meta property="og:site_name" content="eksperimen" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/data%20gempa/","headline":"OlahGempa","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=acfedc79745714a99aec34d486b7975228ade562">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">eksperimen</a></h1>
+      
+
+      <h1 id="olahgempa">OlahGempa</h1>
+
+<p>Ini adalah salah satu <em>side project</em> saya. Intinya, saya penasaran apakah kita dapat memprediksi – dimana, kapan, dan/atau berapa magnitudo – dari sebuah gempa, jika kita mengetahui hal-hal lain; seperti gempa-gempa yang telah terjadi, pergerakan objek langit seperti bulan, cuaca(?), dkk. Saya berniat mengembangkan AI untuk hal ini, bisa bantu?</p>
+
+<p><em>26 Maret 2018</em></p>
+
+<h2 id="apa-yang-telah-saya-lakukan">Apa yang telah saya lakukan</h2>
+<p>Dalam proyek ini, saya membuat akun dari <a href="http://repogempa.bmkg.go.id/">Katalog Gempabumi BMKG</a>. Selanjutnya, dengan scraping.py, saya mencoba mendownload <strong>raw data</strong>nya. Jika saya perhatikan, data paling lawas adalah data tahun 2008. Selain itu, sepertinya kode program masih terdapat kesalahan (ada perbedaan antara jumlah data yang ada diserver dengan yang berhasil didownload, namun saya tidak tahu dimana salahnya). Setelah menyimpan file rawnya (yang saya rasa terdapat kesalahan jumlah data), saya menyimpannya di log_gempa.csv.</p>
+
+<p>Apa yang saya ingin lakukan adalah:</p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />mengubah CSV ke GeoJSON, dan membuat plot posisi gempa yang telah terjadi di peta.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />membuat ‘timelapse’ gempa yang terjadi sejak 1 Januari 2008.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />membuat plot antar dua variabel, dan beberapa plot hasil analisis lainnya, siapa tau dapat ditemukan sebuah korelasi?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />membuat AI yang memprediksi gempa.</li>
+</ul>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>SMS Gateway Pribadi | eksperimen</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="SMS Gateway Pribadi" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/sms%20gateway/" />
+<meta property="og:url" content="http://localhost:4000/sms%20gateway/" />
+<meta property="og:site_name" content="eksperimen" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/sms%20gateway/","headline":"SMS Gateway Pribadi","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=acfedc79745714a99aec34d486b7975228ade562">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">eksperimen</a></h1>
+      
+
+      <h1 id="sms-gateway-pribadi">SMS Gateway Pribadi</h1>
+<p>Beberapa tempat di Indonesia saat ini tidak memiliki akses internet, masih banyak yang mengandalkan SMS dan telepon untuk berkomunikasi. Proyek ini adalah upaya saya untuk tetap dapat mengirimkan dan menerima email, mengakses sosial media – seperti LINE dan Whatsapps – Wikipedia, KBBI, WolframAlpha, dan sebagainya, menggunakan SMS lewat handphone klasik seperti Nokia.</p>
+
+<p><em>15 May 2018</em></p>
+
+<h2 id="memulai">Memulai</h2>
+<h3 id="prasyarat">Prasyarat</h3>
+<ul>
+  <li>Sepertinya tidak ada alamat <a href="https://en.wikipedia.org/wiki/SMS_gateway">SMS Gateway</a> di Indonesia. Karenanya, diperlukan sebuah server dan nomor telepon yang dapat mentransmisikan dan mengolah SMS. Ada beberapa cara untuk mendapatnya secara gratis – setidaknya dalam masa trial – dari beberapa web seperti <a href="http://twilio.com/">Twilio</a> dan <a href="http://clicksend.com/">ClickSend</a>. Namun cara termudah bagi saya adalah dengan menggunakan <a href="http://telerivet.com/">Telerivet</a> dan menginstall <a href="https://telerivet.com/product/app">Telerivet Gateway App</a> pada smartphone Android.</li>
+  <li><a href="heroku.com">Akun Heroku</a> dan menginstall Heroku CLI. <a href="https://devcenter.heroku.com/articles/heroku-cli">Ini caranya</a>. Ini adalah tempat server nantinya.</li>
+  <li><a href="github.com">Akun Github</a> dan Git, dan <a href="https://gist.github.com/derhuerst/1b15ff4652a867391f03">ini caranya</a></li>
+  <li><a href="https://www.python.org/downloads/">Python 3</a> untuk bahasa pemrograman yang dipakai. Juga <a href="https://github.com/pypa/pipenv">Pipenv</a> untuk mengurus module yang akan digunakan.</li>
+</ul>
+
+<h3 id="menginstall">Menginstall</h3>
+<p>Langkah pertama, <em>clone</em> repo ini. Selanjutnya install module yang diperlukan, dengan</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>pipenv <span class="nb">install</span>
+</code></pre></div></div>
+
+<p>app detail</p>
+
+<p>Dan buat app di Heroku</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>heroku create nama-app
+</code></pre></div></div>
+
+<h3 id="uji-coba">Uji Coba.</h3>
+
+<h3 id="pengembangan">Pengembangan</h3>
+
+<h3 id="lisensi">Lisensi</h3>
+
+<h3 id="tambahan">Tambahan</h3>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>
