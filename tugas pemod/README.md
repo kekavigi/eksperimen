@@ -1,4 +1,5 @@
 # Tugas Permodelan
+Mengakses simulasi di [sini](simulasi/index.html)
 
 ## TODO
 - [] Rapikan kode, dan sesuaikan dengan data lapangan
