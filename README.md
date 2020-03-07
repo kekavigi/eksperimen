@@ -7,3 +7,4 @@ Repo ini daftar berisi *side project* yang saya lakukan.
 * [Download Digilib](download%20digilib)
 * [Materi Tutorial](materi%20tutorial)
 * [SMS Gateway](sms%20gateway)
+* [Tugas Pemodelan](tugas%20pemodelan)
