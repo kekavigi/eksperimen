@@ -30,7 +30,7 @@ What to do with this canvas is specified in the _init()_ procedure of onramp.js 
 The initial canvas dimensions are overridden depending on the actual browser's
 viewport size by additional controls in _canvasresize.js_ implementing a responsive design.
 
-## Programm Files and Structure
+## Program Files and Structure
 
 The javascript code uses pseudo objects in appropriately named files, particularly
 
@@ -115,10 +115,6 @@ The main unique component of the objects is its `traffObj.id`.
 
 Helper-class providing some speed and type-dependent color maps to draw the vehicles.
 
-
-### redirect.js
-
-callback (implementation) of the buttons for the different scenarios on the \<scenario\>.html simulation pages
 
 ## Numerical Integration
 
