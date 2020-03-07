@@ -379,13 +379,11 @@ function updateSim() {
     trafficObjs.zoomBack();
   }
   // (6) debug output
-  //if((itime>=125)&&(itime<=128)){
   if (false) {
     console.log('\n\nitime=', itime, ': end of updateSim loop');
     if (false) {
       console.log('\nmainroad vehicles:');
       mainroad.writeVehiclesSimple();
-      //ramp.writeVehiclesSimple();
     }
     if (false) {
       onlyTL = true;
@@ -394,8 +392,8 @@ function updateSim() {
       mainroad.writeTrafficLights(); // the road's operational TL objects
       mainroad.writeDepotVehObjects();
     }
-    //if(time>1.2){clearInterval(myRun);}
   }
+
 } //updateSim
 //##################################################
 function drawSim() {
