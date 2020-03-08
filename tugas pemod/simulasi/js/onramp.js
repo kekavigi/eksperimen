@@ -14,7 +14,6 @@ console.log(Math.random());          // Always 0.0016341939679719736 with 42
 console.log(Math.random());          // Always 0.9364577392619949 with 42
  Math.seedrandom(42);                // undo side effects of console commands
 */
-var userCanDistortRoads = false;
 var userCanDropObjects = true;
 //#############################################################
 // adapt/override standard param settings from control_gui.js
@@ -113,6 +112,7 @@ var mergeLen = 0.5 * rampLen;
 var mainRampOffset = mainroadLen - straightLen + mergeLen - rampLen;
 var taperLen = 0.2 * rampLen;
 var rampRadius = 4 * arcRadius;
+
 // !! slightdouble-coding necessary unless big changes,
 // I have checked this...
 function updateDimensions() { // if viewport or sizePhys changed
@@ -137,11 +137,6 @@ function updateDimensions() { // if viewport or sizePhys changed
     //rampRadius=4*arcRadius;
     // xxxnew bring traj to roads
     // not needed if doGridding is false since then external traj reference
-    if (userCanDistortRoads) {
-      for (var i = 0; i < network.length; i++) {
-        network[i].gridTrajectories(trajNet_x[i], trajNet_y[i]);
-      }
-    }
     // update positions of fixed obstacles to new road lengths/geometry
     // (e.g. onramp: ramp via the ref virtualStandingVeh)
     // see 'Specification of logical road network' below
@@ -234,15 +229,12 @@ var truck_width = 7;
 //##################################################################
 // Specification of logical road network
 //##################################################################
-var isRing = false; // 0: false; 1: true
 var roadIDmain = 1;
-var roadIDramp = 2;
 var fracTruckToleratedMismatch = 1.0; // 100% allowed=>changes only by sources
 var speedInit = 20; // IC for speed
 // last arg = doGridding (true: user can change road geometry)
-//userCanDistortRoads=true; //!! test
 var mainroad = new road(roadIDmain, mainroadLen, laneWidth, nLanes_main, traj_x,
-  traj_y, density, speedInit, fracTruck, isRing, userCanDistortRoads);
+  traj_y, density, speedInit, fracTruck, false, false); //isRing, userCanDistortRoads
 network[0] = mainroad; // network declared in canvas_gui.js
 var nDet = 5;
 var detectors = [];
