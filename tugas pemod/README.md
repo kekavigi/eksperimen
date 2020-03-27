@@ -1,24 +1,35 @@
-# Simulasi Jalan Raya dengan SUMO
+# Simulasi Arus Lalu Lintas
 
-## Instalasi
-Saya pakai Ubuntu. Instalasi di Ubuntu mudah. hehehe.
+## Menjalankan Simulasi
+Dari program SUMO, buka (Ctrl+O) kode simulasi `main.sumocfg`. Ganti pengaturan viewing (F9) dengan menggunakan `viewing.xml`. Selanjutnya tinggal jalankan simulasi :)
+
+![simulasi](screenshot.png')
+
+## Instalasi SUMO
+> "Simulation of Urban MObility" (Eclipse SUMO) is an open source, highly portable, microscopic and continuous road traffic simulation package designed to handle large road networks.
+
+Dengan menggunakan [SUMO](https://sumo.dlr.de/docs/), kita dapat mengambil data jalan raya dari OpenStreetMap secara cepat, membuat visualisasi dan data simulasi dengan mudah, dan (dengan menginstall hal lain, seperti [Flow](https://github.com/flow-project/flow)), memungkinkan meningkatkan kompleksitas simulasi. Untuk Ubuntu, SUMO dapat diinstall dengan
 ```
 sudo -i
 add-apt-repository ppa:sumo/stable
 apt update && apt install sumo sumo-tools sumo-doc
 ```
-Untuk saya, `sumo --version` adalah 1.5.0
 
-## Data Jalan
-1. Dengan menggunakan [tutorial](https://sumo.dlr.de/docs/Tutorials/OSMWebWizard.html), saya mendownload data OSM dari Jl. Taman Sari ITB. 
-2. Tentu, tidak semua ruas jalan dipakai, **saya hanya butuh data Jl. Taman Sari, bung**. Di folder hasil download, cari file dengan extension `.net.xml`. itu data network jalan. selanjutnya, `netedit [namafile].net.xml`. perbaiki data :)
+Versi SUMO (dapat dicari dengan menjalankan `sumo --version`) yang dipakai pada proyek ini adalah 1.5.0
+
+
+## Mendapatkan Data Jalan Raya
+SUMO telah memberikan [tutorial sederhana]((https://sumo.dlr.de/docs/Tutorials/OSMWebWizard.html)) bagaimana mendapatkan data jalan raya dari Open Street Map (OSM). SUMO juga menyediakan `netedit`, program GUI yang memungkinkan merapikan data yang diambil dari OSM.
+
 
 ## Data Simulasi
-3. Ikuti [tutorial](https://sumo.dlr.de/docs/Tutorials/Autobahn.html) untuk membuat simulasi jalan raya.
-4. tinggal jalankan, untuk ouput ke XML, ikuti [tutorial](https://sumo.dlr.de/docs/Simulation/Output/RawDump.html), untuk troubleshooting, ada [disini](https://sourceforge.net/p/sumo/mailman/message/35758310/)
+Sekali lagi, SUMO menyediakan [tutorial](https://sumo.dlr.de/docs/Tutorials/Autobahn.html) untuk membuat simulasi jalan raya, dan [tutorial](https://sumo.dlr.de/docs/Simulation/Output/RawDump.html) untuk output ke XML. Untuk troubleshooting, ada [disini](https://sourceforge.net/p/sumo/mailman/message/35758310/).
+
 
 
 # TODO:
-1. Atur jenis kendaraan; inflow speed, persentasi jumlah, dkk...
-2. Tambahkan obstacle ke jalan, kalau bisa yang 'dinamis' (misal terjadi sekitar 10 menit sekali)
-3. Rapikan visualisasi :)
+- [ ] Pada data jalan, kedua ujung jalan perlu diperpanjang beberapa belas/puluh meter. Hal ini dilakukan untuk memberi ruang (dan waktu) bagi setiap kendaraan untuk berakselerasi. Kita config yang memungkinkan setiap kendaraan yang di-spawn pada awalnya melaju dengan kecepatan maksimum?
+- [ ] tambahkan Car Following Model
+- [ ] Atur jenis kendaraan; inflow speed, persentasi jumlah, dkk...
+- [ ] Tambahkan obstacle ke jalan, kalau bisa yang 'dinamis' (misal terjadi sekitar 10 menit sekali)
+- [ ] Rapikan visualisasi :)
