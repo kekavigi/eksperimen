@@ -3,7 +3,7 @@
 ## Menjalankan Simulasi
 Dari program SUMO, buka (Ctrl+O) kode simulasi `main.sumocfg`. Ganti pengaturan viewing (F9) dengan menggunakan `viewing.xml`. Selanjutnya tinggal jalankan simulasi :)
 
-![simulasi](screenshot.png')
+![simulasi](screenshot.png)
 
 ## Instalasi SUMO
 > "Simulation of Urban MObility" (Eclipse SUMO) is an open source, highly portable, microscopic and continuous road traffic simulation package designed to handle large road networks.
