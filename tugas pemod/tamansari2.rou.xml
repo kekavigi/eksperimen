@@ -1,0 +1,113 @@
+<!-- https://sumo.dlr.de/docs/Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html -->
+
+<routes>
+	<!-- kendaraan yang bergerak dari selatan ke utara -->
+    <vType id="normal_car">
+        <vClass>passenger</vClass>
+        <maxSpeed>40</maxSpeed>
+        <speedFactor>0.9</speedFactor>
+        <speedDev>0.2</speedDev>
+        <sigma>0.5</sigma>
+        <guiShape>passenger</guiShape>
+    </vType>
+    <vType id="sporty_car">
+        <vClass>passenger</vClass>
+        <maxSpeed>60</maxSpeed>
+        <speedFactor>1.3</speedFactor>
+        <speedDev>0.1</speedDev>
+        <sigma>0.1</sigma>
+        <guiShape>passenger</guiShape>
+    </vType>
+    <vType id="coach">
+        <vClass>coach</vClass>
+        <maxSpeed>30</maxSpeed>
+        <speedFactor>1.</speedFactor>
+        <speedDev>0.1</speedDev>
+    </vType>
+
+    <flow id="normal">
+        <type>normal_car</type>
+        <begin>0</begin>
+        <end>5000</end>
+        <number>5000</number>
+        <from>jalan#1</from>
+        <to>jalan#5</to>
+        <departPos>last</departPos>
+        <departLane>best</departLane>
+    </flow>
+    <flow id="sporty">
+        <type>sporty_car</type>
+        <begin>0</begin>
+        <end>5000</end>
+        <number>300</number>
+        <from>jalan#1</from>
+        <to>jalan#5</to>
+        <departPos>last</departPos>
+        <departLane>best</departLane>
+    </flow>
+    <flow id="coach">
+        <type>coach</type>
+        <begin>0</begin>
+        <end>5000</end>
+        <number>300</number>
+        <from>jalan#1</from>
+        <to>jalan#5</to>
+        <departPos>last</departPos>
+        <departLane>best</departLane>
+    </flow>
+
+	<!-- kendaraan yang bergerak dari utara ke selatan. tanda minus diletakkan sebagai konsistensi -->
+    <vType id="normal_car">
+        <vClass>passenger</vClass>
+        <maxSpeed>40</maxSpeed>
+        <speedFactor>0.9</speedFactor>
+        <speedDev>0.2</speedDev>
+        <sigma>0.5</sigma>
+        <guiShape>passenger</guiShape>
+    </vType>
+    <vType id="sporty_car">
+        <vClass>passenger</vClass>
+        <maxSpeed>60</maxSpeed>
+        <speedFactor>1.3</speedFactor>
+        <speedDev>0.1</speedDev>
+        <sigma>0.1</sigma>
+        <guiShape>passenger</guiShape>
+    </vType>
+    <vType id="coach">
+        <vClass>coach</vClass>
+        <maxSpeed>30</maxSpeed>
+        <speedFactor>1.</speedFactor>
+        <speedDev>0.1</speedDev>
+    </vType>
+
+    <flow id="normal">
+        <type>normal_car</type>
+        <begin>0</begin>
+        <end>5000</end>
+        <number>5000</number>
+        <from>jalan#1</from>
+        <to>jalan#5</to>
+        <departPos>last</departPos>
+        <departLane>best</departLane>
+    </flow>
+    <flow id="sporty">
+        <type>sporty_car</type>
+        <begin>0</begin>
+        <end>5000</end>
+        <number>300</number>
+        <from>jalan#1</from>
+        <to>jalan#5</to>
+        <departPos>last</departPos>
+        <departLane>best</departLane>
+    </flow>
+    <flow id="coach">
+        <type>coach</type>
+        <begin>0</begin>
+        <end>5000</end>
+        <number>300</number>
+        <from>jalan#1</from>
+        <to>jalan#5</to>
+        <departPos>last</departPos>
+        <departLane>best</departLane>
+    </flow>
+</routes>

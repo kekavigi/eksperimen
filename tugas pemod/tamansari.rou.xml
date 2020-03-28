@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
-<!-- https://sumo.dlr.de/docs/Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html -->
 
 <routes>
-	<!-- kendaraan yang bergerak dari selatan ke utara -->
-    <vType id="normal_car" vClass="passenger" maxSpeed="40" speedFactor="0.9" speedDev="0.2" sigma="0.5" guiShape="passenger"/>
-    <vType id="sporty_car" vClass="passenger" maxSpeed="60" speedFactor="1.3" speedDev="0.1" sigma="0.1" guiShape="passenger"/>
-    <vType id="trailer" vClass="trailer"  maxSpeed="30" speedFactor="1.1" speedDev="0.1" guiShape="truck/trailer"/>
-    <vType id="coach" vClass="coach"  maxSpeed="30" speedFactor="1." speedDev="0.1" />
+	<!-- KENDARAAN DARI SELATAN KE UTARA -->
 
-    <flow id="normal" type="normal_car" begin="0" end="5000" number="5000" from="jalan#1" to="jalan#5" departPos="last" departLane="best" />
-    <flow id="sporty" type="sporty_car" begin="0" end="5000" number="300" from="jalan#1" to="jalan#5" departPos="last" departLane="best" />
-    <flow id="coach" type="coach" begin="0" end="5000" number="300" from="jalan#1" to="jalan#5" departPos="last" departLane="best" />
-    <flow id="trailer" type="trailer" begin="0" end="5000" number="700" from="jalan#1" to="jalan#5" departPos="last" departLane="best" />
+	<!-- https://sumo.dlr.de/docs/Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html -->
+    <vType id="mobil1" vClass="passenger"  maxSpeed="60" speedFactor="0.9" speedDev="0.2" sigma="0.5"  guiShape="passenger"/>
+    <vType id="mobil2" vClass="passenger"  maxSpeed="80" speedFactor="1.3" speedDev="0.1" sigma="0.1"  guiShape="passenger/sedan"/>
+    <vType id="angkot" vClass="taxi"       maxSpeed="35" speedFactor="1.3" speedDev="0.3" sigma="0.65" guiShape="passenger/van"/>
+    <vType id="bus"    vClass="bus"        maxSpeed="80" speedFactor="1.3" speedDev="0.3" sigma="0.15" guiShape="bus"/>
+    <vType id="motor"  vClass="motorcycle" maxSpeed="50" speedFactor="1.7" speedDev="0.3" sigma="0.2"  guiShape="motorcycle"/>
 
-	<!-- kendaraan yang bergerak dari utara ke selatan. tanda minus diletakkan sebagai konsistensi -->
-    <vType id="-normal_car" vClass="passenger" maxSpeed="40" speedFactor="0.9" speedDev="0.2" sigma="0.5" guiShape="passenger"/>
-    <vType id="-sporty_car" vClass="passenger" maxSpeed="60" speedFactor="1.3" speedDev="0.1" sigma="0.1" guiShape="passenger"/>
-    <vType id="-trailer" vClass="trailer"  maxSpeed="30" speedFactor="1.1" speedDev="0.1" guiShape="truck/trailer"/>
-    <vType id="-coach" vClass="coach"  maxSpeed="30" speedFactor="1." speedDev="0.1" />
+	<!-- https://sumo.dlr.de/docs/Demand/Shortest_or_Optimal_Path_Routing.html -->
+    <flow id="fmobil1" type="mobil1" carFollowModel="IDM"    begin="0" end="3600" number="2000" from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="fmobil2" type="mobil2" carFollowModel="Krauss" begin="0" end="3600" number="3000" from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="fangkot" type="angkot" carFollowModel="IDM"    begin="0" end="3600" number="300"  from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="fbus"    type="bus"    carFollowModel="IDM"    begin="0" end="3600" number="20"   from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="fmotor"  type="motor"  carFollowModel="Krauss" begin="0" end="3600" number="6000" from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
 
-    <flow id="-normal" type="normal_car" begin="0" end="5000" number="5000" from="-jalan#5" to="-jalan#1" departPos="last" departLane="best"/>
-    <flow id="-sporty" type="sporty_car" begin="0" end="5000" number="300" from="-jalan#5" to="-jalan#1" departPos="last" departLane="best" />
-    <flow id="-coach" type="coach" begin="0" end="5000" number="300" from="-jalan#5" to="-jalan#1" departPos="last" departLane="best" />
-    <flow id="-trailer" type="trailer" begin="0" end="5000" number="700" from="-jalan#5" to="-jalan#1" departPos="last" departLane="best" />
+	<!-- KENDARAAN DARI UTARA KE SELATAN --> 
+    <vType id="-mobil1" vClass="passenger"  maxSpeed="60" speedFactor="0.9" speedDev="0.2" sigma="0.5"  guiShape="passenger"/>
+    <vType id="-mobil2" vClass="passenger"  maxSpeed="80" speedFactor="1.3" speedDev="0.1" sigma="0.1"  guiShape="passenger/sedan"/>
+    <vType id="-angkot" vClass="taxi"       maxSpeed="35" speedFactor="1.3" speedDev="0.3" sigma="0.65" guiShape="passenger/van"/>
+    <vType id="-bus"    vClass="bus"        maxSpeed="80" speedFactor="1.3" speedDev="0.3" sigma="0.15" guiShape="bus"/>
+    <vType id="-motor"  vClass="motorcycle" maxSpeed="50" speedFactor="1.7" speedDev="0.3" sigma="0.2"  guiShape="motorcycle"/>
+
+    <flow id="-fmobil1" type="-mobil1" carFollowModel="IDM"    begin="0" end="3600" number="2000" from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="-fmobil2" type="-mobil2" carFollowModel="Krauss" begin="0" end="3600" number="3000" from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="-fangkot" type="-angkot" carFollowModel="IDM"    begin="0" end="3600" number="300"  from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="-fbus"    type="-bus"    carFollowModel="IDM"    begin="0" end="3600" number="20"   from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="-fmotor"  type="-motor"  carFollowModel="Krauss" begin="0" end="3600" number="6000" from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
 </routes>
 
