@@ -2,33 +2,33 @@
 
 
 <routes>
-	<!-- KENDARAAN DARI SELATAN KE UTARA -->
 
+	<!-- KENDARAAN DARI SELATAN KE UTARA -->
 	<!-- https://sumo.dlr.de/docs/Definition_of_Vehicles,_Vehicle_Types,_and_Routes.html -->
-    <vType id="mobil1" vClass="passenger"  maxSpeed="60" speedFactor="0.9" speedDev="0.2" sigma="0.5"  guiShape="passenger"/>
-    <vType id="mobil2" vClass="passenger"  maxSpeed="80" speedFactor="1.3" speedDev="0.1" sigma="0.1"  guiShape="passenger/sedan"/>
-    <vType id="angkot" vClass="taxi"       maxSpeed="35" speedFactor="1.3" speedDev="0.3" sigma="0.65" guiShape="passenger/van"/>
-    <vType id="bus"    vClass="bus"        maxSpeed="80" speedFactor="1.3" speedDev="0.3" sigma="0.15" guiShape="bus"/>
-    <vType id="motor"  vClass="motorcycle" maxSpeed="50" speedFactor="1.7" speedDev="0.3" sigma="0.2"  guiShape="motorcycle"/>
+    <vType id="mobil1" vClass="passenger"  carFollowModel="Krauss" maxSpeed="60" speedFactor="0.9" speedDev="0.2" sigma="0.5"  guiShape="passenger"/>
+    <vType id="mobil2" vClass="passenger"  carFollowModel="Krauss" maxSpeed="80" speedFactor="1.3" speedDev="0.1" sigma="0.1"  guiShape="passenger/sedan"/>
+    <vType id="angkot" vClass="passenger"  carFollowModel="Krauss" maxSpeed="40" speedFactor="1.3" speedDev="0.3" sigma="0.65" guiShape="passenger/van"/>
+    <vType id="bus"    vClass="bus"        carFollowModel="Krauss" maxSpeed="80" speedFactor="1.3" speedDev="0.3" sigma="0.15" guiShape="bus"/>
+    <vType id="motor"  vClass="motorcycle" carFollowModel="Krauss" maxSpeed="50" speedFactor="1.7" speedDev="0.3" sigma="0.2"  guiShape="motorcycle"/>
 
 	<!-- https://sumo.dlr.de/docs/Demand/Shortest_or_Optimal_Path_Routing.html -->
-    <flow id="fmobil1" type="mobil1" carFollowModel="IDM"    begin="0" end="3600" number="2000" from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
-    <flow id="fmobil2" type="mobil2" carFollowModel="Krauss" begin="0" end="3600" number="3000" from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
-    <flow id="fangkot" type="angkot" carFollowModel="IDM"    begin="0" end="3600" number="300"  from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
-    <flow id="fbus"    type="bus"    carFollowModel="IDM"    begin="0" end="3600" number="20"   from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
-    <flow id="fmotor"  type="motor"  carFollowModel="Krauss" begin="0" end="3600" number="6000" from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="fmobil1" type="mobil1" begin="0" end="3600" number="2000" from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="fmobil2" type="mobil2" begin="0" end="3600" number="3000" from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="fangkot" type="angkot" begin="0" end="3600" number="300"  from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="fbus"    type="bus"    begin="0" end="3600" number="20"   from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="fmotor"  type="motor"  begin="0" end="3600" number="6000" from="jalan#1" to="jalan#5" departPos="last" departLane="free" departSpeed="desired"/>
 
 	<!-- KENDARAAN DARI UTARA KE SELATAN --> 
-    <vType id="-mobil1" vClass="passenger"  maxSpeed="60" speedFactor="0.9" speedDev="0.2" sigma="0.5"  guiShape="passenger"/>
-    <vType id="-mobil2" vClass="passenger"  maxSpeed="80" speedFactor="1.3" speedDev="0.1" sigma="0.1"  guiShape="passenger/sedan"/>
-    <vType id="-angkot" vClass="taxi"       maxSpeed="35" speedFactor="1.3" speedDev="0.3" sigma="0.65" guiShape="passenger/van"/>
-    <vType id="-bus"    vClass="bus"        maxSpeed="80" speedFactor="1.3" speedDev="0.3" sigma="0.15" guiShape="bus"/>
-    <vType id="-motor"  vClass="motorcycle" maxSpeed="50" speedFactor="1.7" speedDev="0.3" sigma="0.2"  guiShape="motorcycle"/>
+    <vType id="-mobil1" vClass="passenger"  carFollowModel="Krauss" maxSpeed="60" speedFactor="0.9" speedDev="0.2" sigma="0.5"  guiShape="passenger"/>
+    <vType id="-mobil2" vClass="passenger"  carFollowModel="Krauss" maxSpeed="80" speedFactor="1.3" speedDev="0.1" sigma="0.1"  guiShape="passenger/sedan"/>
+    <vType id="-angkot" vClass="passenger"  carFollowModel="Krauss" maxSpeed="40" speedFactor="1.3" speedDev="0.3" sigma="0.65" guiShape="passenger/van"/>
+    <vType id="-bus"    vClass="bus"        carFollowModel="Krauss" maxSpeed="80" speedFactor="1.3" speedDev="0.3" sigma="0.15" guiShape="bus"/>
+    <vType id="-motor"  vClass="motorcycle" carFollowModel="Krauss" maxSpeed="50" speedFactor="1.7" speedDev="0.3" sigma="0.2"  guiShape="motorcycle"/>
 
-    <flow id="-fmobil1" type="-mobil1" carFollowModel="IDM"    begin="0" end="3600" number="2000" from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
-    <flow id="-fmobil2" type="-mobil2" carFollowModel="Krauss" begin="0" end="3600" number="3000" from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
-    <flow id="-fangkot" type="-angkot" carFollowModel="IDM"    begin="0" end="3600" number="300"  from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
-    <flow id="-fbus"    type="-bus"    carFollowModel="IDM"    begin="0" end="3600" number="20"   from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
-    <flow id="-fmotor"  type="-motor"  carFollowModel="Krauss" begin="0" end="3600" number="6000" from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="-fmobil1" type="-mobil1" begin="0" end="3600" number="2000" from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="-fmobil2" type="-mobil2" begin="0" end="3600" number="3000" from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="-fangkot" type="-angkot" begin="0" end="3600" number="300"  from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="-fbus"    type="-bus"    begin="0" end="3600" number="20"   from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
+    <flow id="-fmotor"  type="-motor"  begin="0" end="3600" number="6000" from="-jalan#5" to="-jalan#1" departPos="last" departLane="free" departSpeed="desired"/>
 </routes>
 

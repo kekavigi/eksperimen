@@ -1,10 +1,13 @@
 # Simulasi Arus Lalu Lintas
 
+![taman sari](map.png)
+
 
 ## Menjalankan Simulasi
 Dari program SUMO, buka (Ctrl+O) kode simulasi `main.sumocfg`. Ganti pengaturan viewing (F9) dengan menggunakan `viewing.xml`. Selanjutnya tinggal jalankan simulasi :)
 ![simulasi](screenshot.png)
 
+Terdapat dua versi route dalam repo ini. `tamansari.rou.xml` berisi data kendaraan dasar, sedangkan `tamansari_sublane.rou.xml` adalah versi pengembangan yang memperhatikan kendaraan yang stop, peluang untuk pindah lajur, dan sebagainya. Referensi dapat dilihat di masing-masing file. Hasil dari masing-masing simulasi dapat dilihat di file `out` dan `out_sublane`.
 
 ## Instalasi SUMO
 > "Simulation of Urban MObility" (Eclipse SUMO) is an open source, highly portable, microscopic and continuous road traffic simulation package designed to handle large road networks.
