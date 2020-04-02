@@ -3,7 +3,7 @@
   xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
     <input>
         <net-file    value="tamansari.net.xml"/>
-        <route-files value="tamansari.rou.xml"/>
+        <route-files value="tamansari_sublane.rou.xml"/>
     </input>
     <time>
         <begin value="0"/>
