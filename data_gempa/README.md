@@ -1,4 +1,6 @@
-# OlahGempa
+# Data Gempa
+
+![](img/banner.png)
 
 Ini adalah salah satu proyek sampingan saya. Di sini, saya penasaran mengenai kejadian-kejadian gempa di Indonesia, dan apakah kita dapat membuat prediksi kejadian gempa. Untuk melihat perkembangan terkini, silahkan [lihat di sini](index.html).
 
