@@ -1,3 +1,7 @@
 # OlahGempa
 
-Ini adalah salah satu *side project* saya. Intinya, saya penasaran apakah kita dapat memprediksi -- dimana, kapan, dan/atau berapa magnitudo -- dari sebuah gempa, jika kita mengetahui hal-hal lain; seperti gempa-gempa yang telah terjadi, pergerakan objek langit seperti bulan, cuaca(?), dkk. Saya berniat mengembangkan model matematika untuk hal ini, bisa bantu?
+Ini adalah salah satu proyek sampingan saya. Di sini, saya penasaran mengenai kejadian-kejadian gempa di Indonesia, dan apakah kita dapat membuat prediksi kejadian gempa. Untuk melihat perkembangan terkini, silahkan [lihat di sini](index.html).
+
+## Mengenai data
+
+Saya mengambil data dari Katalog Gempabumi milik Badan Meteorologi Klimatologi dan Geofisika, yang dapat diakses oleh umum [di sini](http://repogempa.bmkg.go.id/repo_new/).
